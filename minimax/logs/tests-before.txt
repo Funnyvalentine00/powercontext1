@@ -1,0 +1,14 @@
+F...                                                                     [100%]
+=================================== FAILURES ===================================
+_______________ test_member_discount_not_stacked_with_threshold ________________
+
+    def test_member_discount_not_stacked_with_threshold():
+        order = Order(paid_amount=200.00, member=True)
+>       assert compute_refund(order) == 160.00
+E       assert 150.0 == 160.0
+E        +  where 150.0 = compute_refund(Order(paid_amount=200.0, member=True, shipped=False))
+
+tests/test_refund.py:12: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_refund.py::test_member_discount_not_stacked_with_threshold
+1 failed, 3 passed in 0.01s

@@ -1,0 +1,24 @@
+id: task-001
+title: 修复退款计费：会员折扣不得与满减叠加
+objective: >-
+  依据退款计费规格 v2 的 R2（优惠不叠加），修改 compute_refund，
+  使会员折扣与订单满减只取对用户更有利的一种，并保持 R1 退款上限。
+spec:
+  file: sample-app/spec/refund.md
+  version: v2
+  clauses: [R1, R2]
+code:
+  file: sample-app/src/refund.py
+  symbols: [compute_refund, _member_price, _threshold_price]
+tests:
+  file: sample-app/tests/test_refund.py
+  ids:
+    - test_member_discount_not_stacked_with_threshold
+    - test_member_discount_below_threshold
+    - test_non_member_threshold_discount
+    - test_refund_never_exceeds_paid_amount
+target_test: test_member_discount_not_stacked_with_threshold
+required_context_tokens:
+  - R2
+  - compute_refund
+  - test_member_discount_not_stacked_with_threshold

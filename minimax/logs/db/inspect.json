@@ -1,0 +1,4823 @@
+{
+  "backend": "embedded seekdb (pylibseekdb)",
+  "path": "/root/eval/repo/minimax/data/pc/seekdb",
+  "database": "test",
+  "captured_at": "2026-10-30T21:39:10+0800",
+  "queries": [
+    {
+      "sql": "SHOW TABLES",
+      "rows": 46
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_agent_skill_targets`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_candidate_heads`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_candidate_versions`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_heads`",
+      "rows": 1
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_lineage_artifacts`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_lineage_sources`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_processing_auto_wave_targets`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_processing_binding_states`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_processing_intents`",
+      "rows": 4
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_processing_leases`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_processing_migration_receipts`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_processing_pending`",
+      "rows": 1
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_processing_schema`",
+      "rows": 1
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_processing_sequences`",
+      "rows": 1
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_publications`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifact_tags`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_artifacts`",
+      "rows": 9
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_connector_checkpoints`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_dream_runs`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_external_skill_registrations`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_memory_entry_heads`",
+      "rows": 9
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_memory_entry_versions`",
+      "rows": 9
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_model_usage_daily`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_profile_policies`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_recall_token_daily`",
+      "rows": 1
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_receipt_migration_review`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_recurrence_match`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_recurrence_observation`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_scope_bindings`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_scope_context_references`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_scope_creation_requests`",
+      "rows": 2
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_scope_external_references`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_scope_settings`",
+      "rows": 1
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_scopes`",
+      "rows": 2
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_skill_packages`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_skill_publications`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_source_cursors`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_source_definition_manifests`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_source_journal_heads`",
+      "rows": 1
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_sources`",
+      "rows": 9
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_topic_memory_active_chunks`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_topic_memory_active_topics`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_topic_memory_processing_targets`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_topic_memory_retrieval_shape`",
+      "rows": 1
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_topic_memory_revision_publications`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT COUNT(*) FROM `pc_topic_memory_work_budgets`",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_agent_skill_targets` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_id` FROM `pc_agent_skill_targets` WHERE `target_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `display_name` FROM `pc_agent_skill_targets` WHERE `display_name` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `agent_kind` FROM `pc_agent_skill_targets` WHERE `agent_kind` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_scope` FROM `pc_agent_skill_targets` WHERE `installation_scope` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `delivery_mode` FROM `pc_agent_skill_targets` WHERE `delivery_mode` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_id` FROM `pc_agent_skill_targets` WHERE `installation_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `state` FROM `pc_agent_skill_targets` WHERE `state` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `enrollment_token_digest` FROM `pc_agent_skill_targets` WHERE `enrollment_token_digest` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `credential_subject` FROM `pc_agent_skill_targets` WHERE `credential_subject` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `credential_verifier` FROM `pc_agent_skill_targets` WHERE `credential_verifier` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `receiver_version` FROM `pc_agent_skill_targets` WHERE `receiver_version` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `environment_fingerprint` FROM `pc_agent_skill_targets` WHERE `environment_fingerprint` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `machine_hostname` FROM `pc_agent_skill_targets` WHERE `machine_hostname` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `workspace_name` FROM `pc_agent_skill_targets` WHERE `workspace_name` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_candidate_heads` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `candidate_id` FROM `pc_artifact_candidate_heads` WHERE `candidate_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_candidate_heads` WHERE `family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `status` FROM `pc_artifact_candidate_heads` WHERE `status` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `result_family` FROM `pc_artifact_candidate_heads` WHERE `result_family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `result_artifact_id` FROM `pc_artifact_candidate_heads` WHERE `result_artifact_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `decision_reason` FROM `pc_artifact_candidate_heads` WHERE `decision_reason` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_candidate_versions` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `candidate_id` FROM `pc_artifact_candidate_versions` WHERE `candidate_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_candidate_versions` WHERE `family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `proposal` FROM `pc_artifact_candidate_versions` WHERE `proposal` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_refs` FROM `pc_artifact_candidate_versions` WHERE `source_refs` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_refs` FROM `pc_artifact_candidate_versions` WHERE `artifact_refs` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_citations` FROM `pc_artifact_candidate_versions` WHERE `memory_citations` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_family` FROM `pc_artifact_candidate_versions` WHERE `target_family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_artifact_id` FROM `pc_artifact_candidate_versions` WHERE `target_artifact_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `reason` FROM `pc_artifact_candidate_versions` WHERE `reason` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_heads` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_heads` WHERE `family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_heads` WHERE `artifact_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `searchable_text` FROM `pc_artifact_heads` WHERE `searchable_text` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `lifecycle_state` FROM `pc_artifact_heads` WHERE `lifecycle_state` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `replacement_artifact_id` FROM `pc_artifact_heads` WHERE `replacement_artifact_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_lineage_artifacts` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_lineage_artifacts` WHERE `family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_lineage_artifacts` WHERE `artifact_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `upstream_family` FROM `pc_artifact_lineage_artifacts` WHERE `upstream_family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `upstream_artifact_id` FROM `pc_artifact_lineage_artifacts` WHERE `upstream_artifact_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_lineage_sources` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_lineage_sources` WHERE `family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_lineage_sources` WHERE `artifact_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_type` FROM `pc_artifact_lineage_sources` WHERE `source_type` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_id` FROM `pc_artifact_lineage_sources` WHERE `source_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `wave_id` FROM `pc_artifact_processing_auto_wave_targets` WHERE `wave_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_auto_wave_targets` WHERE `binding_name` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_auto_wave_targets` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_binding_states` WHERE `binding_name` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_intents` WHERE `binding_name` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_intents` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `supervisor_group` FROM `pc_artifact_processing_leases` WHERE `supervisor_group` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `holder_id` FROM `pc_artifact_processing_leases` WHERE `holder_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `migration_id` FROM `pc_artifact_processing_migration_receipts` WHERE `migration_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_migration_receipts` WHERE `binding_name` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_migration_receipts` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_snapshot` FROM `pc_artifact_processing_migration_receipts` WHERE `source_snapshot` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_pending` WHERE `binding_name` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_pending` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `phase` FROM `pc_artifact_processing_schema` WHERE `phase` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `migration_id` FROM `pc_artifact_processing_schema` WHERE `migration_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `config_manifest` FROM `pc_artifact_processing_schema` WHERE `config_manifest` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_scope_id` FROM `pc_artifact_publications` WHERE `target_scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_family` FROM `pc_artifact_publications` WHERE `target_family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_artifact_id` FROM `pc_artifact_publications` WHERE `target_artifact_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_scope_id` FROM `pc_artifact_publications` WHERE `source_scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_family` FROM `pc_artifact_publications` WHERE `source_family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_artifact_id` FROM `pc_artifact_publications` WHERE `source_artifact_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `content_digest` FROM `pc_artifact_publications` WHERE `content_digest` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `idempotency_key` FROM `pc_artifact_publications` WHERE `idempotency_key` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_tags` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_tags` WHERE `family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_tags` WHERE `artifact_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_type` FROM `pc_artifact_tags` WHERE `target_type` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_id` FROM `pc_artifact_tags` WHERE `target_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `tag_key` FROM `pc_artifact_tags` WHERE `tag_key` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `tag` FROM `pc_artifact_tags` WHERE `tag` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifacts` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifacts` WHERE `family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifacts` WHERE `artifact_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `content` FROM `pc_artifacts` WHERE `content` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_citations` FROM `pc_artifacts` WHERE `memory_citations` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_connector_checkpoints` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_id` FROM `pc_connector_checkpoints` WHERE `binding_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `connector_name` FROM `pc_connector_checkpoints` WHERE `connector_name` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `connector_version` FROM `pc_connector_checkpoints` WHERE `connector_version` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `checkpoint` FROM `pc_connector_checkpoints` WHERE `checkpoint` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_dream_runs` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `run_id` FROM `pc_dream_runs` WHERE `run_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `principal_key` FROM `pc_dream_runs` WHERE `principal_key` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `idempotency_key` FROM `pc_dream_runs` WHERE `idempotency_key` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `request_digest` FROM `pc_dream_runs` WHERE `request_digest` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `operation` FROM `pc_dream_runs` WHERE `operation` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `status` FROM `pc_dream_runs` WHERE `status` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `payload` FROM `pc_dream_runs` WHERE `payload` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_external_skill_registrations` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `external_skill_id` FROM `pc_external_skill_registrations` WHERE `external_skill_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `provider` FROM `pc_external_skill_registrations` WHERE `provider` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `agent_kind` FROM `pc_external_skill_registrations` WHERE `agent_kind` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `host_id` FROM `pc_external_skill_registrations` WHERE `host_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_scope` FROM `pc_external_skill_registrations` WHERE `installation_scope` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `locator` FROM `pc_external_skill_registrations` WHERE `locator` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `locator_hash` FROM `pc_external_skill_registrations` WHERE `locator_hash` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `fingerprint` FROM `pc_external_skill_registrations` WHERE `fingerprint` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `name` FROM `pc_external_skill_registrations` WHERE `name` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `description` FROM `pc_external_skill_registrations` WHERE `description` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_memory_entry_heads` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_memory_entry_heads` WHERE `family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_artifact_id` FROM `pc_memory_entry_heads` WHERE `memory_artifact_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_id` FROM `pc_memory_entry_heads` WHERE `entry_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_version_id` FROM `pc_memory_entry_heads` WHERE `entry_version_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_content_hash` FROM `pc_memory_entry_heads` WHERE `entry_content_hash` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `searchable_text` FROM `pc_memory_entry_heads` WHERE `searchable_text` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_memory_entry_versions` WHERE `scope_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_memory_entry_versions` WHERE `family` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_artifact_id` FROM `pc_memory_entry_versions` WHERE `memory_artifact_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_id` FROM `pc_memory_entry_versions` WHERE `entry_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_version_id` FROM `pc_memory_entry_versions` WHERE `entry_version_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `previous_version_id` FROM `pc_memory_entry_versions` WHERE `previous_version_id` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `kind` FROM `pc_memory_entry_versions` WHERE `kind` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `text` FROM `pc_memory_entry_versions` WHERE `text` LIKE '%优惠不叠加%' LIMIT 1",
+      "rows": 1
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_agent_skill_targets` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_id` FROM `pc_agent_skill_targets` WHERE `target_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `display_name` FROM `pc_agent_skill_targets` WHERE `display_name` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `agent_kind` FROM `pc_agent_skill_targets` WHERE `agent_kind` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_scope` FROM `pc_agent_skill_targets` WHERE `installation_scope` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `delivery_mode` FROM `pc_agent_skill_targets` WHERE `delivery_mode` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_id` FROM `pc_agent_skill_targets` WHERE `installation_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `state` FROM `pc_agent_skill_targets` WHERE `state` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `enrollment_token_digest` FROM `pc_agent_skill_targets` WHERE `enrollment_token_digest` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `credential_subject` FROM `pc_agent_skill_targets` WHERE `credential_subject` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `credential_verifier` FROM `pc_agent_skill_targets` WHERE `credential_verifier` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `receiver_version` FROM `pc_agent_skill_targets` WHERE `receiver_version` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `environment_fingerprint` FROM `pc_agent_skill_targets` WHERE `environment_fingerprint` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `machine_hostname` FROM `pc_agent_skill_targets` WHERE `machine_hostname` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `workspace_name` FROM `pc_agent_skill_targets` WHERE `workspace_name` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_candidate_heads` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `candidate_id` FROM `pc_artifact_candidate_heads` WHERE `candidate_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_candidate_heads` WHERE `family` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `status` FROM `pc_artifact_candidate_heads` WHERE `status` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `result_family` FROM `pc_artifact_candidate_heads` WHERE `result_family` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `result_artifact_id` FROM `pc_artifact_candidate_heads` WHERE `result_artifact_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `decision_reason` FROM `pc_artifact_candidate_heads` WHERE `decision_reason` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_candidate_versions` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `candidate_id` FROM `pc_artifact_candidate_versions` WHERE `candidate_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_candidate_versions` WHERE `family` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `proposal` FROM `pc_artifact_candidate_versions` WHERE `proposal` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_refs` FROM `pc_artifact_candidate_versions` WHERE `source_refs` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_refs` FROM `pc_artifact_candidate_versions` WHERE `artifact_refs` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_citations` FROM `pc_artifact_candidate_versions` WHERE `memory_citations` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_family` FROM `pc_artifact_candidate_versions` WHERE `target_family` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_artifact_id` FROM `pc_artifact_candidate_versions` WHERE `target_artifact_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `reason` FROM `pc_artifact_candidate_versions` WHERE `reason` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_heads` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_heads` WHERE `family` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_heads` WHERE `artifact_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `searchable_text` FROM `pc_artifact_heads` WHERE `searchable_text` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `lifecycle_state` FROM `pc_artifact_heads` WHERE `lifecycle_state` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `replacement_artifact_id` FROM `pc_artifact_heads` WHERE `replacement_artifact_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_lineage_artifacts` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_lineage_artifacts` WHERE `family` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_lineage_artifacts` WHERE `artifact_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `upstream_family` FROM `pc_artifact_lineage_artifacts` WHERE `upstream_family` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `upstream_artifact_id` FROM `pc_artifact_lineage_artifacts` WHERE `upstream_artifact_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_lineage_sources` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_lineage_sources` WHERE `family` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_lineage_sources` WHERE `artifact_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_type` FROM `pc_artifact_lineage_sources` WHERE `source_type` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_id` FROM `pc_artifact_lineage_sources` WHERE `source_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `wave_id` FROM `pc_artifact_processing_auto_wave_targets` WHERE `wave_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_auto_wave_targets` WHERE `binding_name` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_auto_wave_targets` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_binding_states` WHERE `binding_name` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_intents` WHERE `binding_name` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_intents` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `supervisor_group` FROM `pc_artifact_processing_leases` WHERE `supervisor_group` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `holder_id` FROM `pc_artifact_processing_leases` WHERE `holder_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `migration_id` FROM `pc_artifact_processing_migration_receipts` WHERE `migration_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_migration_receipts` WHERE `binding_name` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_migration_receipts` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_snapshot` FROM `pc_artifact_processing_migration_receipts` WHERE `source_snapshot` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_pending` WHERE `binding_name` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_pending` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `phase` FROM `pc_artifact_processing_schema` WHERE `phase` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `migration_id` FROM `pc_artifact_processing_schema` WHERE `migration_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `config_manifest` FROM `pc_artifact_processing_schema` WHERE `config_manifest` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_scope_id` FROM `pc_artifact_publications` WHERE `target_scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_family` FROM `pc_artifact_publications` WHERE `target_family` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_artifact_id` FROM `pc_artifact_publications` WHERE `target_artifact_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_scope_id` FROM `pc_artifact_publications` WHERE `source_scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_family` FROM `pc_artifact_publications` WHERE `source_family` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_artifact_id` FROM `pc_artifact_publications` WHERE `source_artifact_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `content_digest` FROM `pc_artifact_publications` WHERE `content_digest` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `idempotency_key` FROM `pc_artifact_publications` WHERE `idempotency_key` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_tags` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_tags` WHERE `family` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_tags` WHERE `artifact_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_type` FROM `pc_artifact_tags` WHERE `target_type` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_id` FROM `pc_artifact_tags` WHERE `target_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `tag_key` FROM `pc_artifact_tags` WHERE `tag_key` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `tag` FROM `pc_artifact_tags` WHERE `tag` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifacts` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifacts` WHERE `family` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifacts` WHERE `artifact_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `content` FROM `pc_artifacts` WHERE `content` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_citations` FROM `pc_artifacts` WHERE `memory_citations` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_connector_checkpoints` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_id` FROM `pc_connector_checkpoints` WHERE `binding_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `connector_name` FROM `pc_connector_checkpoints` WHERE `connector_name` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `connector_version` FROM `pc_connector_checkpoints` WHERE `connector_version` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `checkpoint` FROM `pc_connector_checkpoints` WHERE `checkpoint` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_dream_runs` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `run_id` FROM `pc_dream_runs` WHERE `run_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `principal_key` FROM `pc_dream_runs` WHERE `principal_key` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `idempotency_key` FROM `pc_dream_runs` WHERE `idempotency_key` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `request_digest` FROM `pc_dream_runs` WHERE `request_digest` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `operation` FROM `pc_dream_runs` WHERE `operation` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `status` FROM `pc_dream_runs` WHERE `status` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `payload` FROM `pc_dream_runs` WHERE `payload` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_external_skill_registrations` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `external_skill_id` FROM `pc_external_skill_registrations` WHERE `external_skill_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `provider` FROM `pc_external_skill_registrations` WHERE `provider` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `agent_kind` FROM `pc_external_skill_registrations` WHERE `agent_kind` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `host_id` FROM `pc_external_skill_registrations` WHERE `host_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_scope` FROM `pc_external_skill_registrations` WHERE `installation_scope` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `locator` FROM `pc_external_skill_registrations` WHERE `locator` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `locator_hash` FROM `pc_external_skill_registrations` WHERE `locator_hash` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `fingerprint` FROM `pc_external_skill_registrations` WHERE `fingerprint` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `name` FROM `pc_external_skill_registrations` WHERE `name` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `description` FROM `pc_external_skill_registrations` WHERE `description` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_memory_entry_heads` WHERE `scope_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_memory_entry_heads` WHERE `family` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_artifact_id` FROM `pc_memory_entry_heads` WHERE `memory_artifact_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_id` FROM `pc_memory_entry_heads` WHERE `entry_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_version_id` FROM `pc_memory_entry_heads` WHERE `entry_version_id` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_content_hash` FROM `pc_memory_entry_heads` WHERE `entry_content_hash` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `searchable_text` FROM `pc_memory_entry_heads` WHERE `searchable_text` LIKE '%def compute_refund%' LIMIT 1",
+      "rows": 1
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_agent_skill_targets` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_id` FROM `pc_agent_skill_targets` WHERE `target_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `display_name` FROM `pc_agent_skill_targets` WHERE `display_name` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `agent_kind` FROM `pc_agent_skill_targets` WHERE `agent_kind` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_scope` FROM `pc_agent_skill_targets` WHERE `installation_scope` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `delivery_mode` FROM `pc_agent_skill_targets` WHERE `delivery_mode` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_id` FROM `pc_agent_skill_targets` WHERE `installation_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `state` FROM `pc_agent_skill_targets` WHERE `state` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `enrollment_token_digest` FROM `pc_agent_skill_targets` WHERE `enrollment_token_digest` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `credential_subject` FROM `pc_agent_skill_targets` WHERE `credential_subject` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `credential_verifier` FROM `pc_agent_skill_targets` WHERE `credential_verifier` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `receiver_version` FROM `pc_agent_skill_targets` WHERE `receiver_version` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `environment_fingerprint` FROM `pc_agent_skill_targets` WHERE `environment_fingerprint` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `machine_hostname` FROM `pc_agent_skill_targets` WHERE `machine_hostname` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `workspace_name` FROM `pc_agent_skill_targets` WHERE `workspace_name` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_candidate_heads` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `candidate_id` FROM `pc_artifact_candidate_heads` WHERE `candidate_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_candidate_heads` WHERE `family` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `status` FROM `pc_artifact_candidate_heads` WHERE `status` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `result_family` FROM `pc_artifact_candidate_heads` WHERE `result_family` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `result_artifact_id` FROM `pc_artifact_candidate_heads` WHERE `result_artifact_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `decision_reason` FROM `pc_artifact_candidate_heads` WHERE `decision_reason` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_candidate_versions` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `candidate_id` FROM `pc_artifact_candidate_versions` WHERE `candidate_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_candidate_versions` WHERE `family` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `proposal` FROM `pc_artifact_candidate_versions` WHERE `proposal` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_refs` FROM `pc_artifact_candidate_versions` WHERE `source_refs` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_refs` FROM `pc_artifact_candidate_versions` WHERE `artifact_refs` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_citations` FROM `pc_artifact_candidate_versions` WHERE `memory_citations` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_family` FROM `pc_artifact_candidate_versions` WHERE `target_family` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_artifact_id` FROM `pc_artifact_candidate_versions` WHERE `target_artifact_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `reason` FROM `pc_artifact_candidate_versions` WHERE `reason` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_heads` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_heads` WHERE `family` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_heads` WHERE `artifact_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `searchable_text` FROM `pc_artifact_heads` WHERE `searchable_text` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `lifecycle_state` FROM `pc_artifact_heads` WHERE `lifecycle_state` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `replacement_artifact_id` FROM `pc_artifact_heads` WHERE `replacement_artifact_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_lineage_artifacts` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_lineage_artifacts` WHERE `family` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_lineage_artifacts` WHERE `artifact_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `upstream_family` FROM `pc_artifact_lineage_artifacts` WHERE `upstream_family` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `upstream_artifact_id` FROM `pc_artifact_lineage_artifacts` WHERE `upstream_artifact_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_lineage_sources` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_lineage_sources` WHERE `family` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_lineage_sources` WHERE `artifact_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_type` FROM `pc_artifact_lineage_sources` WHERE `source_type` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_id` FROM `pc_artifact_lineage_sources` WHERE `source_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `wave_id` FROM `pc_artifact_processing_auto_wave_targets` WHERE `wave_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_auto_wave_targets` WHERE `binding_name` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_auto_wave_targets` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_binding_states` WHERE `binding_name` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_intents` WHERE `binding_name` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_intents` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `supervisor_group` FROM `pc_artifact_processing_leases` WHERE `supervisor_group` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `holder_id` FROM `pc_artifact_processing_leases` WHERE `holder_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `migration_id` FROM `pc_artifact_processing_migration_receipts` WHERE `migration_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_migration_receipts` WHERE `binding_name` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_migration_receipts` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_snapshot` FROM `pc_artifact_processing_migration_receipts` WHERE `source_snapshot` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_pending` WHERE `binding_name` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_pending` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `phase` FROM `pc_artifact_processing_schema` WHERE `phase` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `migration_id` FROM `pc_artifact_processing_schema` WHERE `migration_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `config_manifest` FROM `pc_artifact_processing_schema` WHERE `config_manifest` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_scope_id` FROM `pc_artifact_publications` WHERE `target_scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_family` FROM `pc_artifact_publications` WHERE `target_family` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_artifact_id` FROM `pc_artifact_publications` WHERE `target_artifact_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_scope_id` FROM `pc_artifact_publications` WHERE `source_scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_family` FROM `pc_artifact_publications` WHERE `source_family` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_artifact_id` FROM `pc_artifact_publications` WHERE `source_artifact_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `content_digest` FROM `pc_artifact_publications` WHERE `content_digest` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `idempotency_key` FROM `pc_artifact_publications` WHERE `idempotency_key` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_tags` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_tags` WHERE `family` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_tags` WHERE `artifact_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_type` FROM `pc_artifact_tags` WHERE `target_type` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_id` FROM `pc_artifact_tags` WHERE `target_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `tag_key` FROM `pc_artifact_tags` WHERE `tag_key` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `tag` FROM `pc_artifact_tags` WHERE `tag` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifacts` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifacts` WHERE `family` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifacts` WHERE `artifact_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `content` FROM `pc_artifacts` WHERE `content` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_citations` FROM `pc_artifacts` WHERE `memory_citations` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_connector_checkpoints` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_id` FROM `pc_connector_checkpoints` WHERE `binding_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `connector_name` FROM `pc_connector_checkpoints` WHERE `connector_name` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `connector_version` FROM `pc_connector_checkpoints` WHERE `connector_version` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `checkpoint` FROM `pc_connector_checkpoints` WHERE `checkpoint` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_dream_runs` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `run_id` FROM `pc_dream_runs` WHERE `run_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `principal_key` FROM `pc_dream_runs` WHERE `principal_key` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `idempotency_key` FROM `pc_dream_runs` WHERE `idempotency_key` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `request_digest` FROM `pc_dream_runs` WHERE `request_digest` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `operation` FROM `pc_dream_runs` WHERE `operation` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `status` FROM `pc_dream_runs` WHERE `status` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `payload` FROM `pc_dream_runs` WHERE `payload` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_external_skill_registrations` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `external_skill_id` FROM `pc_external_skill_registrations` WHERE `external_skill_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `provider` FROM `pc_external_skill_registrations` WHERE `provider` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `agent_kind` FROM `pc_external_skill_registrations` WHERE `agent_kind` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `host_id` FROM `pc_external_skill_registrations` WHERE `host_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_scope` FROM `pc_external_skill_registrations` WHERE `installation_scope` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `locator` FROM `pc_external_skill_registrations` WHERE `locator` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `locator_hash` FROM `pc_external_skill_registrations` WHERE `locator_hash` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `fingerprint` FROM `pc_external_skill_registrations` WHERE `fingerprint` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `name` FROM `pc_external_skill_registrations` WHERE `name` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `description` FROM `pc_external_skill_registrations` WHERE `description` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_memory_entry_heads` WHERE `scope_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_memory_entry_heads` WHERE `family` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_artifact_id` FROM `pc_memory_entry_heads` WHERE `memory_artifact_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_id` FROM `pc_memory_entry_heads` WHERE `entry_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_version_id` FROM `pc_memory_entry_heads` WHERE `entry_version_id` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_content_hash` FROM `pc_memory_entry_heads` WHERE `entry_content_hash` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `searchable_text` FROM `pc_memory_entry_heads` WHERE `searchable_text` LIKE '%def test_member_discount_not_stacked_with_threshold%' LIMIT 1",
+      "rows": 1
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_agent_skill_targets` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_id` FROM `pc_agent_skill_targets` WHERE `target_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `display_name` FROM `pc_agent_skill_targets` WHERE `display_name` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `agent_kind` FROM `pc_agent_skill_targets` WHERE `agent_kind` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_scope` FROM `pc_agent_skill_targets` WHERE `installation_scope` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `delivery_mode` FROM `pc_agent_skill_targets` WHERE `delivery_mode` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_id` FROM `pc_agent_skill_targets` WHERE `installation_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `state` FROM `pc_agent_skill_targets` WHERE `state` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `enrollment_token_digest` FROM `pc_agent_skill_targets` WHERE `enrollment_token_digest` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `credential_subject` FROM `pc_agent_skill_targets` WHERE `credential_subject` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `credential_verifier` FROM `pc_agent_skill_targets` WHERE `credential_verifier` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `receiver_version` FROM `pc_agent_skill_targets` WHERE `receiver_version` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `environment_fingerprint` FROM `pc_agent_skill_targets` WHERE `environment_fingerprint` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `machine_hostname` FROM `pc_agent_skill_targets` WHERE `machine_hostname` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `workspace_name` FROM `pc_agent_skill_targets` WHERE `workspace_name` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_candidate_heads` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `candidate_id` FROM `pc_artifact_candidate_heads` WHERE `candidate_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_candidate_heads` WHERE `family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `status` FROM `pc_artifact_candidate_heads` WHERE `status` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `result_family` FROM `pc_artifact_candidate_heads` WHERE `result_family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `result_artifact_id` FROM `pc_artifact_candidate_heads` WHERE `result_artifact_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `decision_reason` FROM `pc_artifact_candidate_heads` WHERE `decision_reason` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_candidate_versions` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `candidate_id` FROM `pc_artifact_candidate_versions` WHERE `candidate_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_candidate_versions` WHERE `family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `proposal` FROM `pc_artifact_candidate_versions` WHERE `proposal` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_refs` FROM `pc_artifact_candidate_versions` WHERE `source_refs` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_refs` FROM `pc_artifact_candidate_versions` WHERE `artifact_refs` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_citations` FROM `pc_artifact_candidate_versions` WHERE `memory_citations` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_family` FROM `pc_artifact_candidate_versions` WHERE `target_family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_artifact_id` FROM `pc_artifact_candidate_versions` WHERE `target_artifact_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `reason` FROM `pc_artifact_candidate_versions` WHERE `reason` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_heads` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_heads` WHERE `family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_heads` WHERE `artifact_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `searchable_text` FROM `pc_artifact_heads` WHERE `searchable_text` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `lifecycle_state` FROM `pc_artifact_heads` WHERE `lifecycle_state` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `replacement_artifact_id` FROM `pc_artifact_heads` WHERE `replacement_artifact_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_lineage_artifacts` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_lineage_artifacts` WHERE `family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_lineage_artifacts` WHERE `artifact_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `upstream_family` FROM `pc_artifact_lineage_artifacts` WHERE `upstream_family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `upstream_artifact_id` FROM `pc_artifact_lineage_artifacts` WHERE `upstream_artifact_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_lineage_sources` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_lineage_sources` WHERE `family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_lineage_sources` WHERE `artifact_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_type` FROM `pc_artifact_lineage_sources` WHERE `source_type` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_id` FROM `pc_artifact_lineage_sources` WHERE `source_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `wave_id` FROM `pc_artifact_processing_auto_wave_targets` WHERE `wave_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_auto_wave_targets` WHERE `binding_name` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_auto_wave_targets` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_binding_states` WHERE `binding_name` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_intents` WHERE `binding_name` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_intents` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `supervisor_group` FROM `pc_artifact_processing_leases` WHERE `supervisor_group` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `holder_id` FROM `pc_artifact_processing_leases` WHERE `holder_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `migration_id` FROM `pc_artifact_processing_migration_receipts` WHERE `migration_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_migration_receipts` WHERE `binding_name` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_migration_receipts` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_snapshot` FROM `pc_artifact_processing_migration_receipts` WHERE `source_snapshot` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_pending` WHERE `binding_name` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_pending` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `phase` FROM `pc_artifact_processing_schema` WHERE `phase` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `migration_id` FROM `pc_artifact_processing_schema` WHERE `migration_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `config_manifest` FROM `pc_artifact_processing_schema` WHERE `config_manifest` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_scope_id` FROM `pc_artifact_publications` WHERE `target_scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_family` FROM `pc_artifact_publications` WHERE `target_family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_artifact_id` FROM `pc_artifact_publications` WHERE `target_artifact_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_scope_id` FROM `pc_artifact_publications` WHERE `source_scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_family` FROM `pc_artifact_publications` WHERE `source_family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_artifact_id` FROM `pc_artifact_publications` WHERE `source_artifact_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `content_digest` FROM `pc_artifact_publications` WHERE `content_digest` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `idempotency_key` FROM `pc_artifact_publications` WHERE `idempotency_key` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_tags` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_tags` WHERE `family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_tags` WHERE `artifact_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_type` FROM `pc_artifact_tags` WHERE `target_type` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_id` FROM `pc_artifact_tags` WHERE `target_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `tag_key` FROM `pc_artifact_tags` WHERE `tag_key` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `tag` FROM `pc_artifact_tags` WHERE `tag` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifacts` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifacts` WHERE `family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifacts` WHERE `artifact_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `content` FROM `pc_artifacts` WHERE `content` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_citations` FROM `pc_artifacts` WHERE `memory_citations` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_connector_checkpoints` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_id` FROM `pc_connector_checkpoints` WHERE `binding_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `connector_name` FROM `pc_connector_checkpoints` WHERE `connector_name` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `connector_version` FROM `pc_connector_checkpoints` WHERE `connector_version` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `checkpoint` FROM `pc_connector_checkpoints` WHERE `checkpoint` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_dream_runs` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `run_id` FROM `pc_dream_runs` WHERE `run_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `principal_key` FROM `pc_dream_runs` WHERE `principal_key` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `idempotency_key` FROM `pc_dream_runs` WHERE `idempotency_key` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `request_digest` FROM `pc_dream_runs` WHERE `request_digest` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `operation` FROM `pc_dream_runs` WHERE `operation` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `status` FROM `pc_dream_runs` WHERE `status` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `payload` FROM `pc_dream_runs` WHERE `payload` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_external_skill_registrations` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `external_skill_id` FROM `pc_external_skill_registrations` WHERE `external_skill_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `provider` FROM `pc_external_skill_registrations` WHERE `provider` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `agent_kind` FROM `pc_external_skill_registrations` WHERE `agent_kind` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `host_id` FROM `pc_external_skill_registrations` WHERE `host_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_scope` FROM `pc_external_skill_registrations` WHERE `installation_scope` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `locator` FROM `pc_external_skill_registrations` WHERE `locator` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `locator_hash` FROM `pc_external_skill_registrations` WHERE `locator_hash` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `fingerprint` FROM `pc_external_skill_registrations` WHERE `fingerprint` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `name` FROM `pc_external_skill_registrations` WHERE `name` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `description` FROM `pc_external_skill_registrations` WHERE `description` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_memory_entry_heads` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_memory_entry_heads` WHERE `family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_artifact_id` FROM `pc_memory_entry_heads` WHERE `memory_artifact_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_id` FROM `pc_memory_entry_heads` WHERE `entry_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_version_id` FROM `pc_memory_entry_heads` WHERE `entry_version_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_content_hash` FROM `pc_memory_entry_heads` WHERE `entry_content_hash` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `searchable_text` FROM `pc_memory_entry_heads` WHERE `searchable_text` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_memory_entry_versions` WHERE `scope_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_memory_entry_versions` WHERE `family` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_artifact_id` FROM `pc_memory_entry_versions` WHERE `memory_artifact_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_id` FROM `pc_memory_entry_versions` WHERE `entry_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_version_id` FROM `pc_memory_entry_versions` WHERE `entry_version_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `previous_version_id` FROM `pc_memory_entry_versions` WHERE `previous_version_id` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `kind` FROM `pc_memory_entry_versions` WHERE `kind` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `text` FROM `pc_memory_entry_versions` WHERE `text` LIKE '%minimax.sddsync.state.v1%' LIMIT 1",
+      "rows": 1
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_agent_skill_targets` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_id` FROM `pc_agent_skill_targets` WHERE `target_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `display_name` FROM `pc_agent_skill_targets` WHERE `display_name` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `agent_kind` FROM `pc_agent_skill_targets` WHERE `agent_kind` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_scope` FROM `pc_agent_skill_targets` WHERE `installation_scope` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `delivery_mode` FROM `pc_agent_skill_targets` WHERE `delivery_mode` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_id` FROM `pc_agent_skill_targets` WHERE `installation_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `state` FROM `pc_agent_skill_targets` WHERE `state` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `enrollment_token_digest` FROM `pc_agent_skill_targets` WHERE `enrollment_token_digest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `credential_subject` FROM `pc_agent_skill_targets` WHERE `credential_subject` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `credential_verifier` FROM `pc_agent_skill_targets` WHERE `credential_verifier` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `receiver_version` FROM `pc_agent_skill_targets` WHERE `receiver_version` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `environment_fingerprint` FROM `pc_agent_skill_targets` WHERE `environment_fingerprint` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `machine_hostname` FROM `pc_agent_skill_targets` WHERE `machine_hostname` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `workspace_name` FROM `pc_agent_skill_targets` WHERE `workspace_name` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_candidate_heads` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `candidate_id` FROM `pc_artifact_candidate_heads` WHERE `candidate_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_candidate_heads` WHERE `family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `status` FROM `pc_artifact_candidate_heads` WHERE `status` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `result_family` FROM `pc_artifact_candidate_heads` WHERE `result_family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `result_artifact_id` FROM `pc_artifact_candidate_heads` WHERE `result_artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `decision_reason` FROM `pc_artifact_candidate_heads` WHERE `decision_reason` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_candidate_versions` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `candidate_id` FROM `pc_artifact_candidate_versions` WHERE `candidate_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_candidate_versions` WHERE `family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `proposal` FROM `pc_artifact_candidate_versions` WHERE `proposal` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_refs` FROM `pc_artifact_candidate_versions` WHERE `source_refs` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_refs` FROM `pc_artifact_candidate_versions` WHERE `artifact_refs` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_citations` FROM `pc_artifact_candidate_versions` WHERE `memory_citations` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_family` FROM `pc_artifact_candidate_versions` WHERE `target_family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_artifact_id` FROM `pc_artifact_candidate_versions` WHERE `target_artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `reason` FROM `pc_artifact_candidate_versions` WHERE `reason` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_heads` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_heads` WHERE `family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_heads` WHERE `artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `searchable_text` FROM `pc_artifact_heads` WHERE `searchable_text` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `lifecycle_state` FROM `pc_artifact_heads` WHERE `lifecycle_state` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `replacement_artifact_id` FROM `pc_artifact_heads` WHERE `replacement_artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_lineage_artifacts` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_lineage_artifacts` WHERE `family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_lineage_artifacts` WHERE `artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `upstream_family` FROM `pc_artifact_lineage_artifacts` WHERE `upstream_family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `upstream_artifact_id` FROM `pc_artifact_lineage_artifacts` WHERE `upstream_artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_lineage_sources` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_lineage_sources` WHERE `family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_lineage_sources` WHERE `artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_type` FROM `pc_artifact_lineage_sources` WHERE `source_type` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_id` FROM `pc_artifact_lineage_sources` WHERE `source_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `wave_id` FROM `pc_artifact_processing_auto_wave_targets` WHERE `wave_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_auto_wave_targets` WHERE `binding_name` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_auto_wave_targets` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_binding_states` WHERE `binding_name` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_intents` WHERE `binding_name` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_intents` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `supervisor_group` FROM `pc_artifact_processing_leases` WHERE `supervisor_group` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `holder_id` FROM `pc_artifact_processing_leases` WHERE `holder_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `migration_id` FROM `pc_artifact_processing_migration_receipts` WHERE `migration_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_migration_receipts` WHERE `binding_name` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_migration_receipts` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_snapshot` FROM `pc_artifact_processing_migration_receipts` WHERE `source_snapshot` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_artifact_processing_pending` WHERE `binding_name` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_processing_pending` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `phase` FROM `pc_artifact_processing_schema` WHERE `phase` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `migration_id` FROM `pc_artifact_processing_schema` WHERE `migration_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `config_manifest` FROM `pc_artifact_processing_schema` WHERE `config_manifest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_scope_id` FROM `pc_artifact_publications` WHERE `target_scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_family` FROM `pc_artifact_publications` WHERE `target_family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_artifact_id` FROM `pc_artifact_publications` WHERE `target_artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_scope_id` FROM `pc_artifact_publications` WHERE `source_scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_family` FROM `pc_artifact_publications` WHERE `source_family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_artifact_id` FROM `pc_artifact_publications` WHERE `source_artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `content_digest` FROM `pc_artifact_publications` WHERE `content_digest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `idempotency_key` FROM `pc_artifact_publications` WHERE `idempotency_key` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifact_tags` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifact_tags` WHERE `family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifact_tags` WHERE `artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_type` FROM `pc_artifact_tags` WHERE `target_type` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_id` FROM `pc_artifact_tags` WHERE `target_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `tag_key` FROM `pc_artifact_tags` WHERE `tag_key` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `tag` FROM `pc_artifact_tags` WHERE `tag` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_artifacts` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_artifacts` WHERE `family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_artifacts` WHERE `artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `content` FROM `pc_artifacts` WHERE `content` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_citations` FROM `pc_artifacts` WHERE `memory_citations` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_connector_checkpoints` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_id` FROM `pc_connector_checkpoints` WHERE `binding_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `connector_name` FROM `pc_connector_checkpoints` WHERE `connector_name` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `connector_version` FROM `pc_connector_checkpoints` WHERE `connector_version` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `checkpoint` FROM `pc_connector_checkpoints` WHERE `checkpoint` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_dream_runs` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `run_id` FROM `pc_dream_runs` WHERE `run_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `principal_key` FROM `pc_dream_runs` WHERE `principal_key` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `idempotency_key` FROM `pc_dream_runs` WHERE `idempotency_key` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `request_digest` FROM `pc_dream_runs` WHERE `request_digest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `operation` FROM `pc_dream_runs` WHERE `operation` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `status` FROM `pc_dream_runs` WHERE `status` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `payload` FROM `pc_dream_runs` WHERE `payload` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_external_skill_registrations` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `external_skill_id` FROM `pc_external_skill_registrations` WHERE `external_skill_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `provider` FROM `pc_external_skill_registrations` WHERE `provider` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `agent_kind` FROM `pc_external_skill_registrations` WHERE `agent_kind` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `host_id` FROM `pc_external_skill_registrations` WHERE `host_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `installation_scope` FROM `pc_external_skill_registrations` WHERE `installation_scope` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `locator` FROM `pc_external_skill_registrations` WHERE `locator` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `locator_hash` FROM `pc_external_skill_registrations` WHERE `locator_hash` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `fingerprint` FROM `pc_external_skill_registrations` WHERE `fingerprint` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `name` FROM `pc_external_skill_registrations` WHERE `name` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `description` FROM `pc_external_skill_registrations` WHERE `description` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_memory_entry_heads` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_memory_entry_heads` WHERE `family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_artifact_id` FROM `pc_memory_entry_heads` WHERE `memory_artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_id` FROM `pc_memory_entry_heads` WHERE `entry_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_version_id` FROM `pc_memory_entry_heads` WHERE `entry_version_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_content_hash` FROM `pc_memory_entry_heads` WHERE `entry_content_hash` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `searchable_text` FROM `pc_memory_entry_heads` WHERE `searchable_text` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_memory_entry_versions` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_memory_entry_versions` WHERE `family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `memory_artifact_id` FROM `pc_memory_entry_versions` WHERE `memory_artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_id` FROM `pc_memory_entry_versions` WHERE `entry_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_version_id` FROM `pc_memory_entry_versions` WHERE `entry_version_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `previous_version_id` FROM `pc_memory_entry_versions` WHERE `previous_version_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `kind` FROM `pc_memory_entry_versions` WHERE `kind` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `text` FROM `pc_memory_entry_versions` WHERE `text` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_refs` FROM `pc_memory_entry_versions` WHERE `source_refs` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_refs` FROM `pc_memory_entry_versions` WHERE `artifact_refs` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `entry_content_hash` FROM `pc_memory_entry_versions` WHERE `entry_content_hash` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_model_usage_daily` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `purpose` FROM `pc_model_usage_daily` WHERE `purpose` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `operation` FROM `pc_model_usage_daily` WHERE `operation` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_profile_policies` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `activation_mode` FROM `pc_profile_policies` WHERE `activation_mode` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `pending_candidate_id` FROM `pc_profile_policies` WHERE `pending_candidate_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_recall_token_daily` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `estimator_id` FROM `pc_recall_token_daily` WHERE `estimator_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `estimator_version` FROM `pc_recall_token_daily` WHERE `estimator_version` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_receipt_migration_review` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_id` FROM `pc_receipt_migration_review` WHERE `source_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `reason` FROM `pc_receipt_migration_review` WHERE `reason` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_recurrence_match` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `match_key` FROM `pc_recurrence_match` WHERE `match_key` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `task_outcome_source_type` FROM `pc_recurrence_match` WHERE `task_outcome_source_type` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `task_outcome_source_id` FROM `pc_recurrence_match` WHERE `task_outcome_source_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `failure_item_kind` FROM `pc_recurrence_match` WHERE `failure_item_kind` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `failure_item_digest` FROM `pc_recurrence_match` WHERE `failure_item_digest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `candidate_set_mode` FROM `pc_recurrence_match` WHERE `candidate_set_mode` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `candidate_set_digest` FROM `pc_recurrence_match` WHERE `candidate_set_digest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `result` FROM `pc_recurrence_match` WHERE `result` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_family` FROM `pc_recurrence_match` WHERE `target_family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_artifact_id` FROM `pc_recurrence_match` WHERE `target_artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `signature_key` FROM `pc_recurrence_match` WHERE `signature_key` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `payload` FROM `pc_recurrence_match` WHERE `payload` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_recurrence_observation` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `observation_id` FROM `pc_recurrence_observation` WHERE `observation_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `selection_key` FROM `pc_recurrence_observation` WHERE `selection_key` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `verdict_key` FROM `pc_recurrence_observation` WHERE `verdict_key` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `event` FROM `pc_recurrence_observation` WHERE `event` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `match_basis` FROM `pc_recurrence_observation` WHERE `match_basis` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `family` FROM `pc_recurrence_observation` WHERE `family` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_recurrence_observation` WHERE `artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `signature_key` FROM `pc_recurrence_observation` WHERE `signature_key` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `task_outcome_source_type` FROM `pc_recurrence_observation` WHERE `task_outcome_source_type` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `task_outcome_source_id` FROM `pc_recurrence_observation` WHERE `task_outcome_source_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `payload` FROM `pc_recurrence_observation` WHERE `payload` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `integration` FROM `pc_scope_bindings` WHERE `integration` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `kind` FROM `pc_scope_bindings` WHERE `kind` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `external_id` FROM `pc_scope_bindings` WHERE `external_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `external_id_search` FROM `pc_scope_bindings` WHERE `external_id_search` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_scope_bindings` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_scope_context_references` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `referenced_scope_id` FROM `pc_scope_context_references` WHERE `referenced_scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `idempotency_key` FROM `pc_scope_creation_requests` WHERE `idempotency_key` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `request_digest` FROM `pc_scope_creation_requests` WHERE `request_digest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_scope_creation_requests` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_scope_external_references` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `kind` FROM `pc_scope_external_references` WHERE `kind` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `value` FROM `pc_scope_external_references` WHERE `value` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `value_search` FROM `pc_scope_external_references` WHERE `value_search` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `value_digest` FROM `pc_scope_external_references` WHERE `value_digest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `name` FROM `pc_scope_settings` WHERE `name` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_scope_settings` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_scopes` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `title` FROM `pc_scopes` WHERE `title` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `summary` FROM `pc_scopes` WHERE `summary` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id_search` FROM `pc_scopes` WHERE `scope_id_search` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `title_search` FROM `pc_scopes` WHERE `title_search` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `summary_search` FROM `pc_scopes` WHERE `summary_search` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `parent_scope_id` FROM `pc_scopes` WHERE `parent_scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_skill_packages` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `tree_digest` FROM `pc_skill_packages` WHERE `tree_digest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `archive_digest` FROM `pc_skill_packages` WHERE `archive_digest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `archive_bytes` FROM `pc_skill_packages` WHERE `archive_bytes` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `manifest` FROM `pc_skill_packages` WHERE `manifest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_skill_publications` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `target_id` FROM `pc_skill_publications` WHERE `target_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `artifact_id` FROM `pc_skill_publications` WHERE `artifact_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `desired_state` FROM `pc_skill_publications` WHERE `desired_state` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `desired_tree_digest` FROM `pc_skill_publications` WHERE `desired_tree_digest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `observed_tree_digest` FROM `pc_skill_publications` WHERE `observed_tree_digest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `destination` FROM `pc_skill_publications` WHERE `destination` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `state` FROM `pc_skill_publications` WHERE `state` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `selected_runtime_variant` FROM `pc_skill_publications` WHERE `selected_runtime_variant` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `environment_fingerprint` FROM `pc_skill_publications` WHERE `environment_fingerprint` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `last_error_code` FROM `pc_skill_publications` WHERE `last_error_code` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_source_cursors` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `binding_name` FROM `pc_source_cursors` WHERE `binding_name` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `cursor` FROM `pc_source_cursors` WHERE `cursor` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `definition_name` FROM `pc_source_definition_manifests` WHERE `definition_name` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `definition_version` FROM `pc_source_definition_manifests` WHERE `definition_version` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `fingerprint` FROM `pc_source_definition_manifests` WHERE `fingerprint` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `manifest` FROM `pc_source_definition_manifests` WHERE `manifest` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_source_journal_heads` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `scope_id` FROM `pc_sources` WHERE `scope_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_type` FROM `pc_sources` WHERE `source_type` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `source_id` FROM `pc_sources` WHERE `source_id` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 0
+    },
+    {
+      "sql": "SELECT `payload` FROM `pc_sources` WHERE `payload` LIKE '%powercontext.work-contract.v1%' LIMIT 1",
+      "rows": 1
+    }
+  ],
+  "tables": [
+    {
+      "name": "pc_agent_skill_targets",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "target_id",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "display_name",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "agent_kind",
+          "type": "varchar(32)"
+        },
+        {
+          "name": "installation_scope",
+          "type": "varchar(16)"
+        },
+        {
+          "name": "delivery_mode",
+          "type": "varchar(16)"
+        },
+        {
+          "name": "installation_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "state",
+          "type": "varchar(16)"
+        },
+        {
+          "name": "enrollment_token_digest",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "enrollment_expires_at",
+          "type": "datetime"
+        },
+        {
+          "name": "credential_subject",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "credential_verifier",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "receiver_version",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "environment_fingerprint",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "machine_hostname",
+          "type": "varchar(255)"
+        },
+        {
+          "name": "workspace_name",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "last_seen_at",
+          "type": "datetime"
+        },
+        {
+          "name": "generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "created_at",
+          "type": "datetime"
+        },
+        {
+          "name": "updated_at",
+          "type": "datetime"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_artifact_candidate_heads",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "candidate_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "version",
+          "type": "int(11)"
+        },
+        {
+          "name": "status",
+          "type": "varchar(16)"
+        },
+        {
+          "name": "result_family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "result_artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "result_revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "decision_reason",
+          "type": "mediumtext"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_artifact_candidate_versions",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "candidate_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "version",
+          "type": "int(11)"
+        },
+        {
+          "name": "family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "proposal",
+          "type": "mediumblob"
+        },
+        {
+          "name": "source_refs",
+          "type": "mediumblob"
+        },
+        {
+          "name": "artifact_refs",
+          "type": "mediumblob"
+        },
+        {
+          "name": "memory_citations",
+          "type": "mediumblob"
+        },
+        {
+          "name": "target_family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "target_artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "target_revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "reason",
+          "type": "mediumtext"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_artifact_heads",
+      "rows": 1,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "searchable_text",
+          "type": "mediumtext"
+        },
+        {
+          "name": "lifecycle_state",
+          "type": "varchar(16)"
+        },
+        {
+          "name": "replacement_artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "governance_generation",
+          "type": "bigint(20)"
+        }
+      ],
+      "sample": [
+        {
+          "column": "scope_id",
+          "value": "scp_2wz6vgs302d6k7300rrybvt9na"
+        }
+      ]
+    },
+    {
+      "name": "pc_artifact_lineage_artifacts",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "ordinal",
+          "type": "int(11)"
+        },
+        {
+          "name": "upstream_family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "upstream_artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "upstream_revision",
+          "type": "int(11)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_artifact_lineage_sources",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "ordinal",
+          "type": "int(11)"
+        },
+        {
+          "name": "source_type",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "source_id",
+          "type": "varchar(256)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_artifact_processing_auto_wave_targets",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "wave_id",
+          "type": "varchar(36)"
+        },
+        {
+          "name": "binding_name",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "source_through",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "completed",
+          "type": "tinyint(1)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_artifact_processing_binding_states",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "binding_name",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "last_auto_wave_completed_at",
+          "type": "datetime"
+        },
+        {
+          "name": "last_schedule_checkpoint_at",
+          "type": "datetime"
+        },
+        {
+          "name": "scan_generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "scan_in_progress",
+          "type": "tinyint(1)"
+        },
+        {
+          "name": "scan_upper_pending_sequence",
+          "type": "bigint(20)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_artifact_processing_intents",
+      "rows": 4,
+      "columns": [
+        {
+          "name": "binding_name",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "pending_sequence",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "dirty_generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "clean_generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "requested_generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "handled_generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "last_auto_scan_generation",
+          "type": "bigint(20)"
+        }
+      ],
+      "sample": [
+        {
+          "column": "binding_name",
+          "value": "experience-incubation"
+        },
+        {
+          "column": "binding_name",
+          "value": "memory-source-window"
+        }
+      ]
+    },
+    {
+      "name": "pc_artifact_processing_leases",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "supervisor_group",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "holder_id",
+          "type": "varchar(36)"
+        },
+        {
+          "name": "supervisor_generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "lease_expires_at",
+          "type": "datetime"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_artifact_processing_migration_receipts",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "migration_id",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "binding_name",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "source_snapshot",
+          "type": "mediumblob"
+        },
+        {
+          "name": "requested_generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "dirty_generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "source_through",
+          "type": "bigint(20)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_artifact_processing_pending",
+      "rows": 1,
+      "columns": [
+        {
+          "name": "binding_name",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "source_through",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "flush_generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "handled_flush_generation",
+          "type": "bigint(20)"
+        }
+      ],
+      "sample": [
+        {
+          "column": "binding_name",
+          "value": "topic-memory-source-window"
+        }
+      ]
+    },
+    {
+      "name": "pc_artifact_processing_schema",
+      "rows": 1,
+      "columns": [
+        {
+          "name": "singleton",
+          "type": "int(11)"
+        },
+        {
+          "name": "schema_version",
+          "type": "int(11)"
+        },
+        {
+          "name": "source_version",
+          "type": "int(11)"
+        },
+        {
+          "name": "phase",
+          "type": "varchar(32)"
+        },
+        {
+          "name": "migration_id",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "config_manifest",
+          "type": "text"
+        }
+      ],
+      "sample": [
+        {
+          "column": "phase",
+          "value": "complete"
+        }
+      ]
+    },
+    {
+      "name": "pc_artifact_processing_sequences",
+      "rows": 1,
+      "columns": [
+        {
+          "name": "singleton",
+          "type": "int(11)"
+        },
+        {
+          "name": "sequence",
+          "type": "bigint(20)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_artifact_publications",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "target_scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "target_family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "target_artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "target_revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "source_scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "source_family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "source_artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "source_revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "content_digest",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "idempotency_key",
+          "type": "varchar(256)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_artifact_tags",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "target_type",
+          "type": "varchar(12)"
+        },
+        {
+          "name": "target_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "tag_key_hash",
+          "type": "binary(32)"
+        },
+        {
+          "name": "tag_key",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "tag",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "assigned_at",
+          "type": "datetime"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_artifacts",
+      "rows": 9,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "content",
+          "type": "mediumblob"
+        },
+        {
+          "name": "memory_citations",
+          "type": "mediumblob"
+        }
+      ],
+      "sample": [
+        {
+          "column": "scope_id",
+          "value": "scp_2wz6vgs302d6k7300rrybvt9na"
+        },
+        {
+          "column": "scope_id",
+          "value": "scp_2wz6vgs302d6k7300rrybvt9na"
+        }
+      ]
+    },
+    {
+      "name": "pc_connector_checkpoints",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "binding_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "connector_name",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "connector_version",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "checkpoint",
+          "type": "mediumblob"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_dream_runs",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "run_id",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "principal_key",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "idempotency_key",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "request_digest",
+          "type": "varchar(71)"
+        },
+        {
+          "name": "operation",
+          "type": "varchar(32)"
+        },
+        {
+          "name": "status",
+          "type": "varchar(16)"
+        },
+        {
+          "name": "accepted_at",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "generation",
+          "type": "int(11)"
+        },
+        {
+          "name": "request_generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "payload",
+          "type": "mediumblob"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_external_skill_registrations",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "external_skill_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "provider",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "agent_kind",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "host_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "installation_scope",
+          "type": "varchar(16)"
+        },
+        {
+          "name": "locator",
+          "type": "varchar(2000)"
+        },
+        {
+          "name": "locator_hash",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "fingerprint",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "name",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "description",
+          "type": "varchar(2000)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_memory_entry_heads",
+      "rows": 9,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "memory_artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "head_revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "entry_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "entry_version_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "entry_content_hash",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "searchable_text",
+          "type": "mediumtext"
+        }
+      ],
+      "sample": [
+        {
+          "column": "scope_id",
+          "value": "scp_2wz6vgs302d6k7300rrybvt9na"
+        },
+        {
+          "column": "scope_id",
+          "value": "scp_2wz6vgs302d6k7300rrybvt9na"
+        }
+      ]
+    },
+    {
+      "name": "pc_memory_entry_versions",
+      "rows": 9,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "memory_artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "entry_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "entry_version_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "version",
+          "type": "int(11)"
+        },
+        {
+          "name": "previous_version_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "kind",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "text",
+          "type": "mediumtext"
+        },
+        {
+          "name": "source_refs",
+          "type": "mediumblob"
+        },
+        {
+          "name": "artifact_refs",
+          "type": "mediumblob"
+        },
+        {
+          "name": "entry_content_hash",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "created_in_revision",
+          "type": "int(11)"
+        }
+      ],
+      "sample": [
+        {
+          "column": "scope_id",
+          "value": "scp_2wz6vgs302d6k7300rrybvt9na"
+        },
+        {
+          "column": "scope_id",
+          "value": "scp_2wz6vgs302d6k7300rrybvt9na"
+        }
+      ]
+    },
+    {
+      "name": "pc_model_usage_daily",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "usage_date",
+          "type": "date"
+        },
+        {
+          "name": "purpose",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "operation",
+          "type": "varchar(16)"
+        },
+        {
+          "name": "requests",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "input_tokens",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "output_tokens",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "input_complete",
+          "type": "tinyint(1)"
+        },
+        {
+          "name": "output_complete",
+          "type": "tinyint(1)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_profile_policies",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "generation_enabled",
+          "type": "tinyint(1)"
+        },
+        {
+          "name": "activation_mode",
+          "type": "varchar(32)"
+        },
+        {
+          "name": "pending_candidate_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "version",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "updated_at",
+          "type": "datetime"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_recall_token_daily",
+      "rows": 1,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "usage_date",
+          "type": "date"
+        },
+        {
+          "name": "estimator_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "estimator_version",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "preparations",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "ready_preparations",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "comparable_preparations",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "baseline_tokens",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "recalled_tokens",
+          "type": "bigint(20)"
+        }
+      ],
+      "sample": [
+        {
+          "column": "scope_id",
+          "value": "scp_2wz6vgs302d6k7300rrybvt9na"
+        }
+      ]
+    },
+    {
+      "name": "pc_receipt_migration_review",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "source_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "reason",
+          "type": "varchar(64)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_recurrence_match",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "match_key",
+          "type": "varchar(71)"
+        },
+        {
+          "name": "task_outcome_source_type",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "task_outcome_source_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "task_outcome_position",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "failure_item_kind",
+          "type": "varchar(16)"
+        },
+        {
+          "name": "failure_item_index",
+          "type": "int(11)"
+        },
+        {
+          "name": "failure_item_digest",
+          "type": "varchar(71)"
+        },
+        {
+          "name": "candidate_set_mode",
+          "type": "varchar(32)"
+        },
+        {
+          "name": "candidate_set_digest",
+          "type": "varchar(71)"
+        },
+        {
+          "name": "result",
+          "type": "varchar(16)"
+        },
+        {
+          "name": "target_family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "target_artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "target_revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "signature_key",
+          "type": "mediumtext"
+        },
+        {
+          "name": "payload",
+          "type": "mediumblob"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_recurrence_observation",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "observation_id",
+          "type": "varchar(71)"
+        },
+        {
+          "name": "selection_key",
+          "type": "varchar(71)"
+        },
+        {
+          "name": "verdict_key",
+          "type": "varchar(71)"
+        },
+        {
+          "name": "event",
+          "type": "varchar(16)"
+        },
+        {
+          "name": "match_basis",
+          "type": "varchar(8)"
+        },
+        {
+          "name": "family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "signature_key",
+          "type": "mediumtext"
+        },
+        {
+          "name": "signature_key_hash",
+          "type": "binary(32)"
+        },
+        {
+          "name": "task_outcome_source_type",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "task_outcome_source_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "task_outcome_position",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "payload",
+          "type": "mediumblob"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_scope_bindings",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "integration",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "kind",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "external_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "external_id_search",
+          "type": "mediumtext"
+        },
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_scope_context_references",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "referenced_scope_id",
+          "type": "varchar(256)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_scope_creation_requests",
+      "rows": 2,
+      "columns": [
+        {
+          "name": "idempotency_key",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "request_digest",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        }
+      ],
+      "sample": [
+        {
+          "column": "idempotency_key",
+          "value": "minimax-sdd-task-001"
+        },
+        {
+          "column": "idempotency_key",
+          "value": "powercontext.default-scope.v1"
+        }
+      ]
+    },
+    {
+      "name": "pc_scope_external_references",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "ordinal",
+          "type": "int(11)"
+        },
+        {
+          "name": "kind",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "value",
+          "type": "varchar(2000)"
+        },
+        {
+          "name": "value_search",
+          "type": "mediumtext"
+        },
+        {
+          "name": "value_digest",
+          "type": "varchar(64)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_scope_settings",
+      "rows": 1,
+      "columns": [
+        {
+          "name": "name",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        }
+      ],
+      "sample": [
+        {
+          "column": "name",
+          "value": "default"
+        }
+      ]
+    },
+    {
+      "name": "pc_scopes",
+      "rows": 2,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "title",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "summary",
+          "type": "varchar(2000)"
+        },
+        {
+          "name": "scope_id_search",
+          "type": "mediumtext"
+        },
+        {
+          "name": "title_search",
+          "type": "mediumtext"
+        },
+        {
+          "name": "summary_search",
+          "type": "mediumtext"
+        },
+        {
+          "name": "parent_scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "version",
+          "type": "int(11)"
+        }
+      ],
+      "sample": [
+        {
+          "column": "scope_id",
+          "value": "scp_2wz6vgs302d6k7300rrybvt9na"
+        },
+        {
+          "column": "scope_id",
+          "value": "scp_761mhgjscyxpzdy3yjsvazv281"
+        }
+      ]
+    },
+    {
+      "name": "pc_skill_packages",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "tree_digest",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "archive_digest",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "archive_bytes",
+          "type": "mediumblob"
+        },
+        {
+          "name": "manifest",
+          "type": "mediumblob"
+        },
+        {
+          "name": "file_count",
+          "type": "int(11)"
+        },
+        {
+          "name": "uncompressed_size",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "archive_size",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "created_at",
+          "type": "datetime"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_skill_publications",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "target_id",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "desired_state",
+          "type": "varchar(16)"
+        },
+        {
+          "name": "desired_revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "desired_tree_digest",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "observed_revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "observed_tree_digest",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "observed_generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "destination",
+          "type": "mediumtext"
+        },
+        {
+          "name": "state",
+          "type": "varchar(32)"
+        },
+        {
+          "name": "selected_runtime_variant",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "environment_fingerprint",
+          "type": "varchar(64)"
+        },
+        {
+          "name": "last_error_code",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "observed_at",
+          "type": "datetime"
+        },
+        {
+          "name": "generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "updated_at",
+          "type": "datetime"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_source_cursors",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "binding_name",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "cursor",
+          "type": "mediumblob"
+        },
+        {
+          "name": "generation",
+          "type": "bigint(20)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_source_definition_manifests",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "definition_name",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "definition_version",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "fingerprint",
+          "type": "varchar(71)"
+        },
+        {
+          "name": "manifest",
+          "type": "mediumblob"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_source_journal_heads",
+      "rows": 1,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "position",
+          "type": "bigint(20)"
+        }
+      ],
+      "sample": [
+        {
+          "column": "scope_id",
+          "value": "scp_2wz6vgs302d6k7300rrybvt9na"
+        }
+      ]
+    },
+    {
+      "name": "pc_sources",
+      "rows": 9,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "source_type",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "source_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "payload",
+          "type": "mediumblob"
+        },
+        {
+          "name": "journal_position",
+          "type": "bigint(20)"
+        }
+      ],
+      "sample": [
+        {
+          "column": "scope_id",
+          "value": "scp_2wz6vgs302d6k7300rrybvt9na"
+        },
+        {
+          "column": "scope_id",
+          "value": "scp_2wz6vgs302d6k7300rrybvt9na"
+        }
+      ]
+    },
+    {
+      "name": "pc_topic_memory_active_chunks",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "chunk_ordinal",
+          "type": "int(11)"
+        },
+        {
+          "name": "start_offset",
+          "type": "int(11)"
+        },
+        {
+          "name": "end_offset",
+          "type": "int(11)"
+        },
+        {
+          "name": "chunk_text",
+          "type": "mediumtext"
+        },
+        {
+          "name": "searchable_text",
+          "type": "mediumtext"
+        },
+        {
+          "name": "policy_version",
+          "type": "varchar(32)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_topic_memory_active_topics",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "title",
+          "type": "mediumtext"
+        },
+        {
+          "name": "summary",
+          "type": "mediumtext"
+        },
+        {
+          "name": "searchable_text",
+          "type": "mediumtext"
+        },
+        {
+          "name": "source_count",
+          "type": "int(11)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_topic_memory_processing_targets",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "binding_name",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "target_request_generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "source_through",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "captured_flush_generation",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "observed_dirty_generation",
+          "type": "bigint(20)"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_topic_memory_retrieval_shape",
+      "rows": 1,
+      "columns": [
+        {
+          "name": "singleton",
+          "type": "int(11)"
+        },
+        {
+          "name": "shape",
+          "type": "varchar(16)"
+        },
+        {
+          "name": "profile_fingerprint",
+          "type": "varchar(64)"
+        }
+      ],
+      "sample": [
+        {
+          "column": "shape",
+          "value": "fts"
+        }
+      ]
+    },
+    {
+      "name": "pc_topic_memory_revision_publications",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "family",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "artifact_id",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "revision",
+          "type": "int(11)"
+        },
+        {
+          "name": "published_at",
+          "type": "datetime"
+        }
+      ],
+      "sample": []
+    },
+    {
+      "name": "pc_topic_memory_work_budgets",
+      "rows": 0,
+      "columns": [
+        {
+          "name": "scope_id",
+          "type": "varchar(256)"
+        },
+        {
+          "name": "binding_name",
+          "type": "varchar(128)"
+        },
+        {
+          "name": "source_after",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "source_through",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "attempt_id",
+          "type": "varchar(36)"
+        },
+        {
+          "name": "attempts",
+          "type": "int(11)"
+        },
+        {
+          "name": "requests",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "tokens",
+          "type": "bigint(20)"
+        },
+        {
+          "name": "failure_code",
+          "type": "varchar(64)"
+        }
+      ],
+      "sample": []
+    }
+  ],
+  "evidence": [
+    {
+      "label": "规格条款",
+      "marker": "优惠不叠加",
+      "table": "pc_memory_entry_versions",
+      "column": "text",
+      "snippet": "计费规格（当前版本 v2）\n\n版本：v2（2026-10-30）\n\n## R1 退款上限\n\n单笔退款金额不得超过用户实付金额，结果保留两位小数。\n\n## R2 优惠不叠加\n\n会员折扣（折扣率下限 0.80，即最多 8 折）与订单满减（满 100 元减 10 元）不得同时作用于同一笔退款。\n当两种优惠条件都满足时，只允许选择对用户更有利的一种，不得先打折再满减（或先满减再打折）。"
+    },
+    {
+      "label": "代码符号",
+      "marker": "def compute_refund",
+      "table": "pc_memory_entry_heads",
+      "column": "searchable_text",
+      "snippet": "reshold_amount return paid_amount return round paid_amount threshold_discount 2 def compute_refund order order float u_6309 u_89c4 u_683c u_8ba1 u_7b97 u_5e94 u_9000 u_91d1 u_989d b_6309_89c4 b_89c4_683c b_683c_8ba1 b_8b"
+    },
+    {
+      "label": "测试用例",
+      "marker": "def test_member_discount_not_stacked_with_threshold",
+      "table": "pc_memory_entry_heads",
+      "column": "searchable_text",
+      "snippet": "b_4e00_79cd b_79cd_4f18 b_4f18_60e0 160 from refund import order compute_refund def test_member_discount_not_stacked_with_threshold order order paid_amount 200 00 member true assert compute_refund order 160 00 def test_m"
+    },
+    {
+      "label": "任务状态",
+      "marker": "minimax.sddsync.state.v1",
+      "table": "pc_memory_entry_versions",
+      "column": "text",
+      "snippet": " \"5ed18f44f0ed2b0ee6406816e6b4845edcacbd7c7a8829a53cfe2e3a4eb5370a\", \"schema\": \"minimax.sddsync.state.v1\", \"scope_id\": \"scp_2wz6vgs302d6k7300rrybvt9na\", \"task_id\": \"task-001\"}"
+    },
+    {
+      "label": "Work Contract",
+      "marker": "powercontext.work-contract.v1",
+      "table": "pc_sources",
+      "column": "payload",
+      "snippet": "ext-source-v1\",\"representation\":\"native\",\"value\":{\"content\":\"{\\n  \\\"schema\\\": \\\"powercontext.work-contract.v1\\\",\\n  \\\"trust\\\": \\\"untrusted_input\\\",\\n  \\\"objective\\\": \\\"依据退款计费规格 v2 的 R2（优惠不叠加），修改 compute_refund， 使会员折扣与订单满"
+    }
+  ]
+}

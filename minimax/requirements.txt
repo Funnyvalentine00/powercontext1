@@ -1,0 +1,14 @@
+# 运行环境说明：上下文模块只依赖 Python 标准库 + PowerContext 仓库已有依赖。
+# pytest 用于样例工程测试，pyyaml 用于读取 tasks/task-001.yaml。
+pytest>=8
+pyyaml>=6
+
+# seekdb 后端（DATABASE_KIND=seekdb，默认）额外需要：
+#   pylibseekdb>=1.4.0.post1,<2   嵌入式 OceanBase 兼容引擎（本次实测 1.4.0.post2）
+#   aiomysql>=0.2     直连 embedded seekdb 执行取证 SQL（本次实测 0.3.2）
+#   pymysql>=1.1,<1.2.1  必须锁 <1.2.1：1.2.1+ 把 converters.escape_bytes_prefixed
+#                         换成哨兵字符串，aiomysql 0.3.2 仍调用它，写 Source 会报
+#                         "TypeError: 'str' object is not callable"（实测 1.2.0 正常）
+# 二者已在 PowerContext 仓库的 [seekdb] extra 与 builtin 依赖中提供；
+# 缺少 pylibseekdb 时模块自动回退到 sqlite（并在日志中提示）。
+# 完整安装请直接执行 bootstrap.sh（会自动处理上述版本约束）。

@@ -1,0 +1,12 @@
+{
+  "before": {
+    "exit_code": 1,
+    "target_failed_with_assertion": true
+  },
+  "after": {
+    "exit_code": 0,
+    "all_passed": true
+  },
+  "target_test": "test_member_discount_not_stacked_with_threshold",
+  "ts": "2026-10-30T21:38:48+0800"
+}
