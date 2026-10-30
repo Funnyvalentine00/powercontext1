@@ -270,6 +270,7 @@ from powercontext.builtin.statistics import (
 )
 from powercontext.builtin.statistics.aggregation import aggregate_statistics
 from powercontext.builtin.tags import ArtifactTagSet, TagFilter, TagQuery, TagQueryPage, TagTarget
+from powercontext.builtin.triggers import SOURCE_WINDOW_TRIGGER_NAME
 from powercontext.builtin.work import (
     HANDOFF_BOUNDARY_SOURCE_KIND,
     HANDOFF_RECEIPT_SOURCE_KIND,
@@ -462,6 +463,16 @@ class _RuntimeStateError(RuntimeError):
         super().__init__(messages[code])
 
 
+def _wake_source_processing(runtime: BuiltinRuntime) -> None:
+    """Let count-based admission re-inspect a Scope after its journal grows."""
+
+    supervisor = runtime.artifact_processing_supervisor
+    if supervisor is None:
+        return
+    for binding_name in (SOURCE_WINDOW_TRIGGER_NAME, TOPIC_MEMORY_SOURCE_WINDOW_BINDING):
+        supervisor.wake(binding_name)
+
+
 class ScopedSourceApplication:
     """Capture raw integration content in one Source partition."""
 
@@ -489,6 +500,7 @@ class ScopedSourceApplication:
                             span.set_attributes({_MEMORY_CAPTURE_SOURCE_COUNT: 1})
             except BaseValueConflictError as error:
                 raise SourceConflictError("identity", error.identity) from None
+            _wake_source_processing(self._runtime)
             return SourceReceipt(
                 source_ref=SourceRef(source_type=record.source_type, source_id=record.source_id),
                 sequence=record.position,
@@ -505,6 +517,7 @@ class ScopedSourceApplication:
                 )
                 if span is not None:
                     span.set_attributes({_MEMORY_CAPTURE_SOURCE_COUNT: 1})
+            _wake_source_processing(self._runtime)
             return SourceReceipt(source_ref=context.sources.catalog.as_ref(source), sequence=sequence)
 
 
@@ -532,11 +545,13 @@ class ScopedRecordApplication:
         /,
     ) -> SourceRecord:
         async with self._runtime._scope_operation(self.scope_id), self._runtime._locked(self.scope_id):
-            return await self._runtime._records().create_source(
+            record = await self._runtime._records().create_source(
                 self.scope_id,
                 source_type,
                 content,
             )
+        _wake_source_processing(self._runtime)
+        return record
 
     async def get_source(self, source_type: str, source_id: str, /) -> SourceRecord:
         async with self._runtime._scope_operation(self.scope_id):
@@ -564,7 +579,9 @@ class ScopedRecordApplication:
         /,
     ) -> ArtifactCreated:
         async with self._runtime._scope_operation(self.scope_id), self._runtime._locked(self.scope_id):
-            return await self._runtime._records().create_artifact(self.scope_id, family, write)
+            created = await self._runtime._records().create_artifact(self.scope_id, family, write)
+        _wake_source_processing(self._runtime)
+        return created
 
     async def get_artifact(self, family: str, artifact_id: str, /) -> ArtifactRecord:
         async with self._runtime._scope_operation(self.scope_id):
