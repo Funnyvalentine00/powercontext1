@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>端侧知识库 · seekdb 混合检索</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <div>
+      <h1>端侧知识库</h1>
+      <p class="sub">向量化在浏览器本地完成 · 混合检索由 seekdb 执行</p>
+    </div>
+    <div class="badges">
+      <span id="backend-badge" class="badge pending">后端：未初始化</span>
+      <span id="db-badge" class="badge">数据库：连接中</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <h2>1. 导入语料</h2>
+      <p class="hint">支持 .md / .txt。文本会在本地切块并逐块生成向量，然后写入 seekdb。</p>
+      <label class="file">
+        <input type="file" id="file-input" accept=".md,.txt,.markdown" multiple />
+        <span>选择文件</span>
+      </label>
+      <textarea id="text-input" rows="6" placeholder="或直接粘贴一段文本，每段之间空一行"></textarea>
+      <div class="row">
+        <button id="ingest-btn">切块 + 本地向量化 + 写入</button>
+        <button id="reset-btn" class="ghost">清空知识库</button>
+      </div>
+      <div id="ingest-progress" class="progress"></div>
+      <div id="doc-list" class="doc-list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>2. 检索</h2>
+      <p class="hint">查询向量同样在本地生成，随后调用 seekdb 的 hybridSearch（向量 + 全文，RRF 融合）。</p>
+      <div class="row">
+        <input id="query-input" type="text" placeholder="例如：如何降低检索延迟？" />
+        <button id="search-btn">检索</button>
+      </div>
+      <div id="timing" class="timing"></div>
+      <div id="results" class="results"></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>模型：all-MiniLM-L6-v2（INT8）· 运行时：Transformers.js · 检索：seekdb hybridSearch</span>
+  </footer>
+
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

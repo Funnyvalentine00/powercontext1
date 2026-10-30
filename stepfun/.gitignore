@@ -1,0 +1,7 @@
+# 运行期与体积较大的目录不入库
+node_modules/
+models/
+*.log
+
+# seekdb 若以 base-dir 方式启动在项目内，也排除
+seekdb-data/

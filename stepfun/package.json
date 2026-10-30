@@ -1,0 +1,19 @@
+{
+  "name": "seekdb-stepfun-kb",
+  "version": "0.1.0",
+  "private": true,
+  "description": "端侧 AI 推理 + seekdb 混合检索的迷你知识库（阶跃星辰生态赛题）",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "install:deps": "bash scripts/install-deps.sh"
+  },
+  "dependencies": {
+    "@huggingface/transformers": "^4.3.2",
+    "mysql2": "^3.24.6"
+  },
+  "stepfunNote": "seekdb@1.4.0 的 npm 包内部使用 workspace: 协议，直接声明会导致 EUNSUPPORTEDPROTOCOL；由 scripts/install-deps.sh 从 tarball 手动装配。",
+  "engines": {
+    "node": ">=20"
+  }
+}
