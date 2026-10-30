@@ -1,0 +1,21 @@
+# 依赖说明（完整安装请直接执行 bash bootstrap.sh）
+
+# 运行环境要求 Python >= 3.11（PowerContext 要求），推荐 3.12。
+
+# PowerContext：以源码方式引用，由 bootstrap.sh 从本仓库 2026-competition 分支取出 src/
+# 并通过 PYTHONPATH 加载，不改动上游代码。
+
+# embedded seekdb 引擎（PowerContext 的 seekdb 后端的必需依赖）
+pylibseekdb>=1.4.0.post1,<2
+
+# 直连 seekdb 执行真实 SQL（PYTHON 与 pymysql 的异步封装）
+aiomysql>=0.2
+
+# 必须锁 <1.2.1：pymysql 1.2.1 起把 converters.escape_bytes_prefixed 换成哨兵字符串
+# "DO NOT IMPORT THIS!!!"，而 aiomysql 0.3.2 仍在调用它，写入 Source 时会报
+# "TypeError: 'str' object is not callable"（实测 1.2.0 正常）。
+pymysql>=1.1,<1.2.1
+
+# 单元测试与任务定义解析
+pytest>=8
+pyyaml>=6

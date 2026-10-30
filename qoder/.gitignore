@@ -1,0 +1,14 @@
+# 数据库运行态与虚拟环境（不入库，评审按运行说明自行生成）
+data/seekdb/
+data/pc/
+data/server.pid
+.upstream/
+.venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# data/corpus/ 是示例语料，必须入库（评审要用它跑通验证样例）。
+# work/ 与 logs/ 也要入库：题面要求「技术使用记录」包含检索记录与记忆读写记录。
+# 提交前建议清理 logs/server.log（服务端日志体积较大，非必需材料）。

@@ -1,0 +1,100 @@
+{
+  "schema": "rca.task-state.v1",
+  "task_id": "research-001",
+  "question": "如何降低嵌入式数据库中文档检索的延迟",
+  "aspects": [
+    "索引结构",
+    "检索延迟预算",
+    "分布式部署",
+    "GPU 加速"
+  ],
+  "statuses": {
+    "索引结构": "supported",
+    "检索延迟预算": "supported",
+    "分布式部署": "insufficient",
+    "GPU 加速": "insufficient"
+  },
+  "evidence": [
+    {
+      "ref": "E1",
+      "chunk_id": "lightweight-vector-index-c000",
+      "doc_id": "lightweight-vector-index",
+      "sha256": "0cd2e9c57c37f48c5847d6efc3a891a2f4ad7ead3b57b9be3e210827e5344c0e"
+    },
+    {
+      "ref": "E2",
+      "chunk_id": "chunking-strategy-c001",
+      "doc_id": "chunking-strategy",
+      "sha256": "159975f2889367408318fde3d6897d4f414a013d7f666aacf21a51eeaf7b11e0"
+    },
+    {
+      "ref": "E3",
+      "chunk_id": "inverted-index-compression-c000",
+      "doc_id": "inverted-index-compression",
+      "sha256": "1b217b188f2a4c8f90e0dd6c2665eff6326ecbe16f102c29aefd6a50f93add56"
+    },
+    {
+      "ref": "E4",
+      "chunk_id": "inverted-index-compression-c001",
+      "doc_id": "inverted-index-compression",
+      "sha256": "d070634e758fecd9c3ce9a17c8ddf4b87c520ca02e2197c05dfcf65abcefc4e4"
+    },
+    {
+      "ref": "E5",
+      "chunk_id": "latency-budget-agent-c000",
+      "doc_id": "latency-budget-agent",
+      "sha256": "86b1a2e73e3eb8fa46189b7ccd26b1e7ca962c79075f94e10be6236c809fcc3b"
+    },
+    {
+      "ref": "E6",
+      "chunk_id": "latency-budget-agent-c001",
+      "doc_id": "latency-budget-agent",
+      "sha256": "3e557b732dd12ab2aa341fa85f9c44fbbb63a8c267010d5c7238899fffb460c3"
+    },
+    {
+      "ref": "E7",
+      "chunk_id": "hybrid-retrieval-embedded-c000",
+      "doc_id": "hybrid-retrieval-embedded",
+      "sha256": "7c2b8ea6623b5e1428aeb2dc82818796ad1bdc70eb2216c2f1ba5a21946a28f2"
+    },
+    {
+      "ref": "E8",
+      "chunk_id": "lightweight-vector-index-c001",
+      "doc_id": "lightweight-vector-index",
+      "sha256": "3ad2ec28eb316dcd564cd43cd3e39a9f8027618e4995d90311d4de0882003da3"
+    }
+  ],
+  "gaps": [
+    {
+      "aspect": "分布式部署",
+      "kind": "insufficient",
+      "detail": "仅 1 条证据，少于 2 条",
+      "missing_terms": [
+        "式部"
+      ]
+    },
+    {
+      "aspect": "GPU 加速",
+      "kind": "insufficient",
+      "detail": "仅 1 条证据，少于 2 条",
+      "missing_terms": [
+        "gpu"
+      ]
+    }
+  ],
+  "documents": [
+    "chunking-strategy",
+    "evidence-grounding",
+    "hybrid-retrieval-embedded",
+    "inverted-index-compression",
+    "latency-budget-agent",
+    "lightweight-vector-index"
+  ],
+  "report_source_id": "rca:report:research-001:cdee4f7c97f436a3",
+  "report_sha256": "cdee4f7c97f436a303cb8fe9f5dc513cb3b9642eeec222249acaf848d944635f",
+  "chunk_stats": {
+    "chunks": 12,
+    "documents": 6
+  },
+  "updated_at": "2026-10-31T00:15:25+08:00"
+}
