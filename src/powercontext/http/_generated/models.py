@@ -3958,6 +3958,12 @@ class PrepareContextRequest(BaseModel):
         StrictBool,
         Field(description="Opt into current-Scope native code evidence. No index is built during preparation."),
     ] = False
+    evidence_selection: Annotated[
+        StrictBool,
+        Field(
+            description="Opt into evidence selection instead of whole-entry rendering. The Server chooses literal Memory spans by query relevance under the whole output byte budget and reports each item's exact character offsets. This takes precedence over assembly when both are provided."
+        ),
+    ] = False
     assembly: ContextAssembly | None = None
 
 

@@ -166,6 +166,7 @@ from powercontext.builtin.runtime._scope_cache import (
     ScopeCacheObserver,
     ScopeEvictor,
 )
+from powercontext.builtin.runtime.context_pack import ContextPack, ContextPackDelta, ContextPackError
 from powercontext.builtin.runtime.decision_model import DecisionModel
 from powercontext.builtin.runtime.errors import InvalidRuntimeRequestError, TopicMemoryProcessingUnavailableError
 from powercontext.builtin.runtime.models import (
@@ -248,6 +249,10 @@ from powercontext.builtin.runtime.recall_sufficiency import (
     build_recall_candidates,
     recall_effort,
 )
+from powercontext.builtin.runtime.source_lifecycle import (
+    SourceLifecycleApplication,
+    SourceLifecycleStore,
+)
 from powercontext.builtin.runtime.statistics import RelationalScopedStatistics, overview_selection
 from powercontext.builtin.scope import ScopeApplication, ScopeDescriptor, ScopeSelection
 from powercontext.builtin.scope.subject_sources import SubjectSourceService
@@ -269,6 +274,7 @@ from powercontext.builtin.statistics import (
 )
 from powercontext.builtin.statistics.aggregation import aggregate_statistics
 from powercontext.builtin.tags import ArtifactTagSet, TagFilter, TagQuery, TagQueryPage, TagTarget
+from powercontext.builtin.triggers import SOURCE_WINDOW_TRIGGER_NAME
 from powercontext.builtin.work import (
     HANDOFF_BOUNDARY_SOURCE_KIND,
     HANDOFF_RECEIPT_SOURCE_KIND,
@@ -461,6 +467,16 @@ class _RuntimeStateError(RuntimeError):
         super().__init__(messages[code])
 
 
+def _wake_source_processing(runtime: BuiltinRuntime) -> None:
+    """Let count-based admission re-inspect a Scope after its journal grows."""
+
+    supervisor = runtime.artifact_processing_supervisor
+    if supervisor is None:
+        return
+    for binding_name in (SOURCE_WINDOW_TRIGGER_NAME, TOPIC_MEMORY_SOURCE_WINDOW_BINDING):
+        supervisor.wake(binding_name)
+
+
 class ScopedSourceApplication:
     """Capture raw integration content in one Source partition."""
 
@@ -488,6 +504,7 @@ class ScopedSourceApplication:
                             span.set_attributes({_MEMORY_CAPTURE_SOURCE_COUNT: 1})
             except BaseValueConflictError as error:
                 raise SourceConflictError("identity", error.identity) from None
+            _wake_source_processing(self._runtime)
             return SourceReceipt(
                 source_ref=SourceRef(source_type=record.source_type, source_id=record.source_id),
                 sequence=record.position,
@@ -504,6 +521,7 @@ class ScopedSourceApplication:
                 )
                 if span is not None:
                     span.set_attributes({_MEMORY_CAPTURE_SOURCE_COUNT: 1})
+            _wake_source_processing(self._runtime)
             return SourceReceipt(source_ref=context.sources.catalog.as_ref(source), sequence=sequence)
 
 
@@ -531,11 +549,13 @@ class ScopedRecordApplication:
         /,
     ) -> SourceRecord:
         async with self._runtime._scope_operation(self.scope_id), self._runtime._locked(self.scope_id):
-            return await self._runtime._records().create_source(
+            record = await self._runtime._records().create_source(
                 self.scope_id,
                 source_type,
                 content,
             )
+        _wake_source_processing(self._runtime)
+        return record
 
     async def get_source(self, source_type: str, source_id: str, /) -> SourceRecord:
         async with self._runtime._scope_operation(self.scope_id):
@@ -563,7 +583,9 @@ class ScopedRecordApplication:
         /,
     ) -> ArtifactCreated:
         async with self._runtime._scope_operation(self.scope_id), self._runtime._locked(self.scope_id):
-            return await self._runtime._records().create_artifact(self.scope_id, family, write)
+            created = await self._runtime._records().create_artifact(self.scope_id, family, write)
+        _wake_source_processing(self._runtime)
+        return created
 
     async def get_artifact(self, family: str, artifact_id: str, /) -> ArtifactRecord:
         async with self._runtime._scope_operation(self.scope_id):
@@ -846,6 +868,30 @@ class ScopedContextApplication:
             if authorize_scopes is not None:
                 await authorize_scopes((self.scope_id, *scope.context_references))
             return await self._prepare(request, scope)
+
+    async def prepare_incremental(
+        self,
+        request: PrepareContextRequest,
+        /,
+        base_pack: ContextPack | None = None,
+        *,
+        authorize_scopes: Callable[[tuple[str, ...]], Awaitable[None]] | None = None,
+    ) -> ContextPack | ContextPackDelta:
+        """Prepare this turn's context as a full pack, or as a delta against a held pack.
+
+        The target pack always encodes exactly what :meth:`prepare` would return, so the
+        receiver rebuilds identical content from serialized data alone. A supplied base pack
+        is only compared — never trusted for the target — and the returned delta names the
+        receiver-held prefix itself, so no shared sender state is required.
+        """
+
+        if base_pack is not None and not isinstance(base_pack, ContextPack):
+            raise ContextPackError("incremental base must be a Context Pack")
+        prepared = await self.prepare(request, authorize_scopes=authorize_scopes)
+        target = ContextPack.from_content(prepared.content or "")
+        if base_pack is None:
+            return target
+        return ContextPackDelta.between(base_pack, target)
 
     async def _prepare(self, request: PrepareContextRequest, scope: ScopeDescriptor, /) -> PreparedContext:
         build, effort = await self._prepare_build(request, scope)
@@ -2667,6 +2713,17 @@ class ScopedTopicMemoryApplication:
                     query_embedding,
                     embedding_timeout_seconds,
                 )
+        unavailable_topics = await self._runtime.lifecycle.for_scope(self.scope_id).unavailable_topic_refs()
+        if unavailable_topics:
+            result = result.model_copy(
+                update={
+                    "hits": tuple(
+                        hit
+                        for hit in result.hits
+                        if (hit.artifact_ref.artifact_id, hit.artifact_ref.revision) not in unavailable_topics
+                    )
+                }
+            )
         observer = self._runtime._topic_memory_search_observer
         if observer is not None:
             try:
@@ -3027,6 +3084,7 @@ class BuiltinRuntime:
         remote_ingestion: RemoteIngestion | None = None,
         dream_service: DreamService | None = None,
         generation_concurrency: int = 4,
+        lifecycle_store: SourceLifecycleStore | None = None,
     ) -> None:
         if source_window_limit < 1:
             raise _RuntimeConfigurationError("source_window_limit")
@@ -3082,6 +3140,7 @@ class BuiltinRuntime:
         self._tracing = tracing
         self._scheduled_source_runner = scheduled_source_runner
         self._scheduled_experience_runner = scheduled_experience_runner
+        self._lifecycle_store = lifecycle_store
         self.source_window_limit = source_window_limit
         self.context_assembly_max_entries = context_assembly_max_entries
         self.recall_sufficiency_policy = recall_sufficiency_policy
@@ -3110,6 +3169,7 @@ class BuiltinRuntime:
         self.work = WorkApplication(self)
         self.memory = MemoryApplication(self)
         self.topic_memory = TopicMemoryApplication(self)
+        self.lifecycle = SourceLifecycleApplication(self)
         self.records = RecordApplication(self)
         self.prompts = PromptApplication(self)
         self.review = ReviewApplication(self)
